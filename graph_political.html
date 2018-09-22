@@ -6,15 +6,13 @@
 <body>
   <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
-    //Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv', function (err, data) {
-    //Plotly.d3.csv("https://raw.githubusercontent.com/nobias-me/news-readability-analyser/master/gapminderDataFiveYear.csv?token=AI7KHaFBJAVZgDVlVjopSaGzc7uNrjbZks5bnrQ3wA%3D%3D", function (err, data) {
 
 //financial
-//Plotly.d3.csv('https://raw.githubusercontent.com/nobias-me/graph/master/new_author_100.csv?token=AI7KHZDz6kgzAyLqIIN2xjc4zgIw0VpJks5bnszmwA%3D%3D', function (err, data) {
+Plotly.d3.csv('https://raw.githubusercontent.com/nobias-me/graph/master/political_read_sent_bubble_data.csv', function (err, data) {
 
 //political
 //Plotly.d3.csv('https://raw.githubusercontent.com/nobias-me/graph/master/new_author_100_political.csv?token=AI7KHcOErKFoTurZenYKZd1UK5ToB9RAks5bntJBwA%3D%3D', function (err, data) {
-Plotly.d3.csv('https://raw.githubusercontent.com/nobias-me/graph/master/political_100_author_bubble.csv', function (err, data) {
+//Plotly.d3.csv('https://raw.githubusercontent.com/nobias-me/graph/master/political_100_author_bubble.csv', function (err, data) {
 
   // Create a lookup table to sort and regroup the columns of data,
   // first by year, then by continent:
@@ -119,12 +117,12 @@ var continents = Object.keys(firstYear);
   
   var layout = {
     xaxis: {
-      title: 'Average Sentiment (>.5 is left-leaning)',
+      title: 'Average Readability',
       range: [0, 1],
      //color: '179CCD'
     },
     yaxis: {
-      title: 'Average Reliability',
+      title: 'Average Sentiment',
       range: [0,50]
       //type: 'log'
     },
